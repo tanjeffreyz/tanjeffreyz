@@ -3,3 +3,6 @@
     <img src="https://tanjeffreyz-github-overview.herokuapp.com/overview" width="100%" />
   </a>
 </div>
+
+![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=0&owner=tanjeffreyz&repo=auto-maple)
+![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=1&owner=tanjeffreyz&repo=electrotactile-braille-display)
