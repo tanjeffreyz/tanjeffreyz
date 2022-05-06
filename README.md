@@ -6,3 +6,5 @@
 
 ![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=0&owner=tanjeffreyz&repo=auto-maple)
 ![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=1&owner=tanjeffreyz&repo=electrotactile-braille-display)
+![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=1&owner=tanjeffreyz&repo=deep-residual-learning)
+![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=0&c=1&owner=tanjeffreyz&repo=lenet-5)
