@@ -27,3 +27,11 @@ jobs:
       run: |
         python --version
         python update.py
+        
+    - name: Commit new README.md
+      run: |
+        git config --global user.name 'github-overview'
+        git config --global user.email 'github-overview@tanjeffreyz.github.io'
+        git add *
+        git commit -m 'Updated overview'
+        git push
