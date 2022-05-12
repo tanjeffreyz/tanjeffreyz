@@ -2,7 +2,7 @@ import re
 import math
 
 
-DELIMITERS = '/|,'
+DELIMITERS = '|'.join([','])
 SETTINGS = {
     'order': [
         '',                 # Default value of setting
@@ -29,14 +29,14 @@ with open('repositories.csv', 'r') as file:
         MAX_ROWS = int(first_line[0].strip())
         MAX_COLS = int(first_line[1].strip())
     except (StopIteration, ValueError):
-        print('\n[!] Missing arguments on line 1, expected: MAX_ROWS and MAX_COLS')
+        print('\n[!] Missing arguments on line 1, expected: MAX_ROWS, MAX_COLS')
         exit()
 
     # Parse csv
     for i, line in enumerate(reader):
         line = re.split(DELIMITERS, line)
         header = f' !  Line {i}: '
-        if len(line) == 2:
+        if len(line) >= 2:
             if line[0].startswith('$'):
                 key = line[0][1:].strip().lower()
                 value = line[1].strip().lower()
@@ -51,7 +51,8 @@ with open('repositories.csv', 'r') as file:
             else:
                 owner = line[0].strip()
                 repo = line[1].strip()
-                repos.append((owner, repo, r, c))
+                custom_link = ''.join(x.strip() for x in line[2:])
+                repos.append((owner, repo, r, c, custom_link))
                 incremented_c = c + 1
                 c = incremented_c % MAX_COLS
                 r += incremented_c // MAX_COLS
@@ -60,11 +61,17 @@ with open('repositories.csv', 'r') as file:
 
 # Create entries
 max_r = math.ceil(len(repos) / MAX_COLS)
-for owner, repo, r, c in repos:
+for owner, repo, r, c, custom_link in repos:
     src = f'https://tanjeffreyz-github-overview.herokuapp.com/repo/?r={r}&c={c}&maxR={max_r}&owner={owner}&repo={repo}'
+
     for s in SETTINGS:
         src += f"&{s}={SETTINGS[s][0]}"
-    link = f'https://github.com/{owner}/{repo}'
+
+    if custom_link:
+        link = custom_link
+    else:
+        link = f'https://github.com/{owner}/{repo}'
+
     result.append(f'[![]({src})]({link})')
 result.append('')
 
