@@ -9,6 +9,6 @@
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=1&c=0&maxR=4&owner=tanjeffreyz&repo=github-statistics&order=zig-zag)](https://github.com/tanjeffreyz/github-statistics)
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=1&c=1&maxR=4&owner=Marble-Rundown&repo=Animarble&order=zig-zag)](https://github.com/Marble-Rundown/Animarble)
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=2&c=0&maxR=4&owner=tanjeffreyz&repo=deep-residual-learning&order=zig-zag)](https://github.com/tanjeffreyz/deep-residual-learning)
-[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=2&c=1&maxR=4&owner=tanjeffreyz&repo=lenet-5&order=zig-zag)](https://github.com/tanjeffreyz/lenet-5)
-[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=0&maxR=4&owner=tanjeffreyz&repo=generative-adversarial-networks&order=zig-zag)](https://github.com/tanjeffreyz/generative-adversarial-networks)
+[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=2&c=1&maxR=4&owner=tanjeffreyz&repo=generative-adversarial-networks&order=zig-zag)](https://github.com/tanjeffreyz/generative-adversarial-networks)
+[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=0&maxR=4&owner=tanjeffreyz&repo=lenet-5&order=zig-zag)](https://github.com/tanjeffreyz/lenet-5)
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=1&maxR=4&owner=tanjeffreyz&repo=toolbox&order=zig-zag)](https://github.com/tanjeffreyz/toolbox)
