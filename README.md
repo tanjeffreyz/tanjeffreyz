@@ -11,4 +11,4 @@
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=2&c=0&maxR=4&owner=tanjeffreyz&repo=ml-paper-implementations&order=zig-zag)](https://tanjeffreyz.github.io/ml-paper-implementations)
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=2&c=1&maxR=4&owner=tanjeffreyz&repo=generative-adversarial-networks&order=zig-zag)](https://github.com/tanjeffreyz/generative-adversarial-networks)
 [![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=0&maxR=4&owner=tanjeffreyz&repo=deep-residual-learning&order=zig-zag)](https://github.com/tanjeffreyz/deep-residual-learning)
-[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=1&maxR=4&owner=tanjeffreyz&repo=lenet-5&order=zig-zag)](https://github.com/tanjeffreyz/lenet-5)
+[![](https://tanjeffreyz-github-overview.herokuapp.com/repo/?r=3&c=1&maxR=4&owner=tanjeffreyz&repo=batch-normalization&order=zig-zag)](https://github.com/tanjeffreyz/batch-normalization)
