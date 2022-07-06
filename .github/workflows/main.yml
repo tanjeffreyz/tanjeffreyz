@@ -24,7 +24,7 @@ jobs:
     - name: Update overview
       run: |
         python --version
-        python update.py
+        python main.py
         
     - name: Commit new README.md
       run: |

@@ -2,6 +2,7 @@ import re
 import math
 
 
+HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
 DELIMITERS = '|'.join([','])
 SETTINGS = {
     'order': [
@@ -12,14 +13,14 @@ SETTINGS = {
 
 # Load template
 with open('template.txt', 'r') as file:
-    result = [file.read()]
+    template = file.read()
+    result = [template.replace('__HOST__', HOST)]
 
 # Gather repository info
 repos = []
 r = 0
 c = 0
 with open('repositories.csv', 'r') as file:
-    # reader = csv.reader(file, delimiter='/', skipinitialspace=True)
     reader = iter(file.readlines())
 
     # Retrieve dimensions
@@ -62,7 +63,7 @@ with open('repositories.csv', 'r') as file:
 # Create entries
 max_r = math.ceil(len(repos) / MAX_COLS)
 for owner, repo, r, c, custom_link in repos:
-    src = f'https://tanjeffreyz-github-overview.herokuapp.com/repo/?r={r}&c={c}&maxR={max_r}&owner={owner}&repo={repo}'
+    src = f'{HOST}/repo/?r={r}&c={c}&maxR={max_r}&owner={owner}&repo={repo}'
 
     for s in SETTINGS:
         src += f"&{s}={SETTINGS[s][0]}"
