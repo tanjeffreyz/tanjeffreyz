@@ -20,7 +20,7 @@ with open('template.txt', 'r') as file:
 repos = []
 r = 0
 c = 0
-with open('repositories.csv', 'r') as file:
+with open('!_repositories.txt', 'r') as file:
     reader = iter(file.readlines())
 
     # Retrieve dimensions
