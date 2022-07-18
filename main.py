@@ -4,6 +4,7 @@ import utils
 
 
 HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
+GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 DELIMITERS = '|'.join([','])
 SETTINGS = {
     'order': [
@@ -13,7 +14,7 @@ SETTINGS = {
 }
 
 # Overview banner
-overview_banner = utils.get_banner(f'{HOST}/overview', 'https://github.com/tanjeffreyz/github-statistics')
+overview_banner = utils.markdown_image(f'{HOST}/overview', GITHUB_STATISTICS)
 result = [overview_banner]
 
 # Gather repository info
@@ -73,10 +74,10 @@ for owner, repo, r, c, custom_link in repos:
     else:
         link = f'https://github.com/{owner}/{repo}'
 
-    result.append(f'[![]({src})]({link})')
+    result.append(utils.markdown_image(src, link))
 
 # Footer banner
-footer_banner = utils.get_banner(f'{HOST}/footer?maxR={max_r}', '')
+footer_banner = utils.markdown_image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS)
 result.append(footer_banner)
 
 # Update README.md
