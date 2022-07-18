@@ -1,0 +1,5 @@
+<div align="center" width="100%">
+  <a href="__HREF__">
+    <img src="__SRC__" width="100%" />
+  </a>
+</div>

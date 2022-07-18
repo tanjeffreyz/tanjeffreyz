@@ -1,5 +1,6 @@
 import re
 import math
+import utils
 
 
 HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
@@ -11,10 +12,9 @@ SETTINGS = {
     ]
 }
 
-# Load template
-with open('template.txt', 'r') as file:
-    template = file.read()
-    result = [template.replace('__HOST__', HOST)]
+# Overview banner
+overview_banner = utils.get_banner(f'{HOST}/overview', 'https://github.com/tanjeffreyz/github-statistics')
+result = [overview_banner]
 
 # Gather repository info
 repos = []
@@ -75,6 +75,10 @@ for owner, repo, r, c, custom_link in repos:
 
     result.append(f'[![]({src})]({link})')
 result.append('')
+
+# Footer banner
+footer_banner = utils.get_banner(f'{HOST}/footer/?maxR={max_r}', '')
+result.append(footer_banner)
 
 # Update README.md
 with open('README.md', 'w') as file:

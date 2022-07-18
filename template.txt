@@ -1,5 +1,0 @@
-<div align="center" width="100%">
-  <a href="https://github.com/tanjeffreyz/github-statistics">
-    <img src="__HOST__/overview" width="100%" />
-  </a>
-</div>
