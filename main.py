@@ -74,7 +74,6 @@ for owner, repo, r, c, custom_link in repos:
         link = f'https://github.com/{owner}/{repo}'
 
     result.append(f'[![]({src})]({link})')
-result.append('')
 
 # Footer banner
 footer_banner = utils.get_banner(f'{HOST}/footer?maxR={max_r}', '')
