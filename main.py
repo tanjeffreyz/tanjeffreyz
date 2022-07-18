@@ -63,7 +63,7 @@ with open('!_repositories.txt', 'r') as file:
 # Create entries
 max_r = math.ceil(len(repos) / MAX_COLS)
 for owner, repo, r, c, custom_link in repos:
-    src = f'{HOST}/repo/?r={r}&c={c}&maxR={max_r}&owner={owner}&repo={repo}'
+    src = f'{HOST}/repo?r={r}&c={c}&maxR={max_r}&owner={owner}&repo={repo}'
 
     for s in SETTINGS:
         src += f"&{s}={SETTINGS[s][0]}"
@@ -77,7 +77,7 @@ for owner, repo, r, c, custom_link in repos:
 result.append('')
 
 # Footer banner
-footer_banner = utils.get_banner(f'{HOST}/footer/?maxR={max_r}', '')
+footer_banner = utils.get_banner(f'{HOST}/footer?maxR={max_r}', '')
 result.append(footer_banner)
 
 # Update README.md
