@@ -21,7 +21,7 @@ result = [overview_banner]
 repos = []
 r = 0
 c = 0
-with open('!_repositories.txt', 'r') as file:
+with open('config.txt', 'r') as file:
     reader = iter(file.readlines())
 
     # Retrieve dimensions
