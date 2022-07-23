@@ -2,8 +2,8 @@
 $order, zig-zag
 
 tanjeffreyz, auto-maple
-tanjeffreyz, electrotactile-braille-display, https://tanjeffreyz.github.io/electrotactile-braille-display
 tanjeffreyz, github-statistics
+tanjeffreyz, electrotactile-braille-display, https://tanjeffreyz.github.io/electrotactile-braille-display
 Marble-Rundown, Animarble
 tanjeffreyz, ml-paper-implementations, https://tanjeffreyz.github.io/ml-paper-implementations
 tanjeffreyz, generative-adversarial-networks
