@@ -81,5 +81,6 @@ footer_banner = utils.markdown_image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATI
 result.append(footer_banner)
 
 # Update README.md
+result.append('')
 with open('README.md', 'w') as file:
     file.write('\n'.join(result))
