@@ -6,7 +6,7 @@ import utils
 HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
 GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 DELIMITERS = '|'.join([','])
-BANNER_WIDTH = 98
+BANNER_WIDTH = 97
 SETTINGS = {
     'order': [
         '',                 # Default value of setting
