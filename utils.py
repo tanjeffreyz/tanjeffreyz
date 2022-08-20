@@ -2,7 +2,11 @@ IGNORED_TAGS = ('meta', 'link', '!DOCTYPE', 'br', 'hr')
 
 
 def image(src, link, width=100.0):
-    return f'<img src="{src}" href="{link}" width="{width}%" />'
+    return [
+        f'<a href="{link}">',
+        f'<img src="{src}" width="{width}%" />',
+        '</a>'
+    ]
 
 
 def indent(contents):

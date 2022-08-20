@@ -6,6 +6,7 @@ import utils
 HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
 GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 DELIMITERS = '|'.join([','])
+BANNER_WIDTH = 99.6
 SETTINGS = {
     'order': [
         '',                 # Default value of setting
@@ -16,8 +17,7 @@ SETTINGS = {
 result = ['<div align="center">']
 
 # Overview banner
-overview_banner = utils.image(f'{HOST}/overview', GITHUB_STATISTICS)
-result.append(overview_banner)
+result += utils.image(f'{HOST}/overview', GITHUB_STATISTICS, width=BANNER_WIDTH)
 
 # Gather repository info
 repos = []
@@ -76,11 +76,10 @@ for owner, repo, r, c, custom_link in repos:
     else:
         link = f'https://github.com/{owner}/{repo}'
 
-    result.append(utils.image(src, link, width=49.6))
+    result += utils.image(src, link, width=49.6)
 
 # Footer banner
-footer_banner = utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS)
-result.append(footer_banner)
+result += utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS, width=BANNER_WIDTH)
 
 # Close div and update README.md
 result.append('</div>')
