@@ -14,10 +14,11 @@ SETTINGS = {
     ]
 }
 
-result = ['<div align="center">']
-
 # Overview banner
-result += utils.image(f'{HOST}/overview', GITHUB_STATISTICS, width=BANNER_WIDTH)
+result = [
+    '<div align="center">',
+    utils.image(f'{HOST}/overview', GITHUB_STATISTICS, width=BANNER_WIDTH)
+]
 
 # Gather repository info
 repos = []
@@ -76,10 +77,10 @@ for owner, repo, r, c, custom_link in repos:
     else:
         link = f'https://github.com/{owner}/{repo}'
 
-    result += utils.image(src, link, width=49.5)
+    result.append(utils.image(src, link, width=49.5))
 
 # Footer banner
-result += utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS, width=BANNER_WIDTH)
+result.append(utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS, width=BANNER_WIDTH))
 
 # Close div and update README.md
 result.append('</div>')
