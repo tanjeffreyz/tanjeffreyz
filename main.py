@@ -76,7 +76,7 @@ for owner, repo, r, c, custom_link in repos:
     else:
         link = f'https://github.com/{owner}/{repo}'
 
-    result.append(utils.image(src, link, width=49.7))
+    result.append(utils.image(src, link, width=49.6))
 
 # Footer banner
 footer_banner = utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS)
