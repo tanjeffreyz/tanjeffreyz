@@ -32,7 +32,7 @@ with open('config.txt', 'r') as file:
         first_line = next(reader)
         first_line = re.split(DELIMITERS, first_line)
         MAX_ROWS = int(first_line[0].strip())
-        MAX_COLS = int(first_line[1].strip())
+        MAX_COLS = 2
     except (StopIteration, ValueError):
         print('\n[!] Missing arguments on line 1, expected: MAX_ROWS, MAX_COLS')
         exit()
