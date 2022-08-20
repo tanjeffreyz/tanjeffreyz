@@ -6,7 +6,7 @@ import utils
 HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
 GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 DELIMITERS = '|'.join([','])
-BANNER_WIDTH = 99.4
+BANNER_WIDTH = 99
 SETTINGS = {
     'order': [
         '',                 # Default value of setting
@@ -77,7 +77,7 @@ for owner, repo, r, c, custom_link in repos:
     else:
         link = f'https://github.com/{owner}/{repo}'
 
-    result.append(utils.image(src, link, width=49.5))
+    result.append(utils.image(src, link, width=49))
 
 # Footer banner
 result.append(utils.image(f'{HOST}/footer?maxR={max_r}', GITHUB_STATISTICS, width=BANNER_WIDTH))
