@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://github.com/tanjeffreyz/github-statistics">
+    <a href="https://github.com/tanjeffreyz/github-statistics" target="_blank">
         <img src="https://tanjeffreyz-github-overview.herokuapp.com/overview" width="99.4%" />
     </a>
     <a href="https://github.com/tanjeffreyz/auto-maple">
