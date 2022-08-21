@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://github.com/tanjeffreyz/github-statistics"><img src="https://tanjeffreyz-github-overview.herokuapp.com/overview" width="98.6%" /></a>
+    <a href="https://github.com/tanjeffreyz/github-statistics"><img src="https://tanjeffreyz-github-overview.herokuapp.com/overview" width="98.52%" /></a>
     <a href="https://github.com/tanjeffreyz/auto-maple"><img src="https://tanjeffreyz-github-overview.herokuapp.com/repo?r=0&c=0&maxR=4&owner=tanjeffreyz&repo=auto-maple&order=zig-zag" width="49%" /></a>
     <a href="https://github.com/tanjeffreyz/github-statistics"><img src="https://tanjeffreyz-github-overview.herokuapp.com/repo?r=0&c=1&maxR=4&owner=tanjeffreyz&repo=github-statistics&order=zig-zag" width="49%" /></a>
     <a href="https://tanjeffreyz.github.io/electrotactile-braille-display"><img src="https://tanjeffreyz-github-overview.herokuapp.com/repo?r=1&c=0&maxR=4&owner=tanjeffreyz&repo=electrotactile-braille-display&order=zig-zag" width="49%" /></a>
