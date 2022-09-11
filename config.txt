@@ -3,10 +3,12 @@ $order, zig-zag
 
 tanjeffreyz, auto-maple
 tanjeffreyz, github-statistics
+
+tanjeffreyz, ml-paper-implementations, https://tanjeffreyz.github.io/ml-paper-implementations
+tanjeffreyz, planit
+
 tanjeffreyz, electrotactile-braille-display, https://tanjeffreyz.github.io/electrotactile-braille-display
 Marble-Rundown, Animarble
-tanjeffreyz, planit
-tanjeffreyz, ml-paper-implementations, https://tanjeffreyz.github.io/ml-paper-implementations
+
 tanjeffreyz, yolo-v1
 tanjeffreyz, generative-adversarial-networks
- 
