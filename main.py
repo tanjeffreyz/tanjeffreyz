@@ -19,7 +19,7 @@ SETTINGS = {
 # Overview banner
 result = [
     '<div align="center">',
-    utils.linked_image(f'{HOST}/overview', GITHUB_STATISTICS, BANNER_WIDTH)
+    utils.image(f'{HOST}/overview', GITHUB_STATISTICS, BANNER_WIDTH)
 ]
 
 # Gather repository info
@@ -80,14 +80,14 @@ for r in range(rows):
             src += f"&{s}={SETTINGS[s][0]}"
         link = custom_link if custom_link else f'https://github.com/{owner}/{repo}'
 
-        html_row.append(utils.linked_image(src, link, CARD_WIDTH))
+        html_row.append(utils.image(src, link, CARD_WIDTH))
     num_spacers = cols - 1
     spacer_size = (BANNER_WIDTH - NUM_COLS * CARD_WIDTH) / num_spacers
-    spacer = utils.image(f'{HOST}/spacer', spacer_size)
+    spacer = utils.image(f'{HOST}/spacer', '#', spacer_size)
     result.append(spacer.join(html_row))
 
 # Footer banner
-result.append(utils.linked_image(f'{HOST}/footer?maxR={rows}', GITHUB_STATISTICS, BANNER_WIDTH))
+result.append(utils.image(f'{HOST}/footer?maxR={rows}', GITHUB_STATISTICS, BANNER_WIDTH))
 
 # Close div and update README.md
 result.append('</div>')
