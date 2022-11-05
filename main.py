@@ -54,7 +54,6 @@ for row in repos:
         print(f'[!] CRITICAL: Not enough repositories to make {len(repos)}x{NUM_COLS} grid')
         exit(1)
 
-
 # Create entries
 rows = len(repos)
 for r in range(rows):
