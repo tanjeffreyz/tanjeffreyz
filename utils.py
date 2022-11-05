@@ -6,7 +6,7 @@ def image(src, link, width):
 
 
 def spacer(width):
-    return f'<img width="{width:.2f}%" />'
+    return f'<img src="" width="{width:.2f}%" />'
 
 
 def indent(contents):
