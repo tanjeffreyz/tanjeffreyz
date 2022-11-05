@@ -64,7 +64,7 @@ with open('config.txt', 'r') as file:
 for row in repos:
     if len(row) != NUM_COLS:
         print(f'[!] CRITICAL: Not enough repositories to make {len(repos)}x{NUM_COLS} grid')
-        exit()
+        exit(1)
 
 
 # Create entries
