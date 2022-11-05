@@ -7,3 +7,4 @@ tanjeffreyz, electrotactile-braille-display, https://tanjeffreyz.github.io/elect
 tanjeffreyz, ml-paper-implementations, https://tanjeffreyz.github.io/ml-paper-implementations
 Marble-Rundown, Animarble
 tanjeffreyz, yolo-v1
+tanjeffreyz, generative-adversarial-networks
