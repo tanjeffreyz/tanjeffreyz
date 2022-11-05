@@ -1,12 +1,12 @@
 IGNORED_TAGS = ('meta', 'link', '!DOCTYPE', 'br', 'hr')
 
 
-def image(src, link, width):
+def linked_image(src, link, width):
     return f'<a href="{link}"><img src="{src}" width="{width:.2f}%" /></a>'
 
 
-def spacer(width):
-    return f'<img src="" width="{width:.2f}%" />'
+def image(src, width):
+    return f'<img src="{src}" width="{width:.2f}%" />'
 
 
 def indent(contents):
