@@ -1,20 +1,8 @@
 import re
 import math
 import utils
+from config import *
 
-
-HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
-GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
-DELIMITERS = '|'.join([','])
-NUM_COLS = 2
-BANNER_WIDTH = 100
-CARD_WIDTH = 49.75
-SETTINGS = {
-    'order': [
-        '',                 # Default value of setting
-        {'zig-zag'}         # Allowed values
-    ]
-}
 
 # Overview banner
 result = [
@@ -26,7 +14,7 @@ result = [
 repos = [[]]
 r = 0
 c = 0
-with open('config.txt', 'r') as file:
+with open('.config', 'r') as file:
     reader = iter(file.readlines())
 
     # Parse csv
