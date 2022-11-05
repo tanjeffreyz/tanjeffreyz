@@ -1,4 +1,4 @@
-HOST = 'https://tanjeffreyz-github-overview.onrender.com'
+HOST = 'https://tanjeffreyz-github-overview.herokuapp.com'
 
 GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 
