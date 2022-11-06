@@ -1,4 +1,4 @@
-HOST = 'https://tanjeffreyz-github-overview.deta.dev'
+HOST = 'https://tanjeffreyz-github-overview.fly.dev'
 
 GITHUB_STATISTICS = 'https://github.com/tanjeffreyz/github-statistics'
 
