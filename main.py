@@ -1,7 +1,7 @@
 import re
 import math
-import utils
-from config import *
+from src import utils
+from src.config import *
 
 
 # Overview banner
