@@ -14,7 +14,7 @@ result = [
 repos = [[]]
 r = 0
 c = 0
-with open('.config', 'r') as file:
+with open('config.txt', 'r') as file:
     reader = iter(file.readlines())
 
     # Parse csv
@@ -51,7 +51,7 @@ with open('.config', 'r') as file:
 
 for row in repos:
     if len(row) != NUM_COLS:
-        print(f'[!] CRITICAL: Not enough repositories to make {len(repos)}x{NUM_COLS} grid')
+        print(f'[!] Not enough repositories to make {len(repos)}x{NUM_COLS} grid')
         exit(1)
 
 # Create entries
