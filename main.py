@@ -50,7 +50,8 @@ with open('config.json', 'r') as file:
 
 for row in repos:
     if len(row) != NUM_COLS:
-        print(f'[!] Not enough repositories to make {len(repos)}x{NUM_COLS} grid')
+        n = len(config['items'])
+        print(f"[!] {n} repositories not enough to make {len(repos)}x{NUM_COLS} grid")
         exit(1)
 
 # Create entries
