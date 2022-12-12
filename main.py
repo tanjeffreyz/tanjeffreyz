@@ -9,7 +9,6 @@ result = [
     utils.image(f'{HOST}/overview', GITHUB_STATISTICS, BANNER_WIDTH)
 ]
 
-
 # Gather repository info
 repos = [[]]
 r = 0
