@@ -1,5 +1,6 @@
 import re
 import math
+import json
 from src import utils
 from src.config import *
 
@@ -10,44 +11,42 @@ result = [
     utils.image(f'{HOST}/overview', GITHUB_STATISTICS, BANNER_WIDTH)
 ]
 
+
 # Gather repository info
 repos = [[]]
 r = 0
 c = 0
-with open('config.txt', 'r') as file:
-    reader = iter(file.readlines())
 
-    # Parse csv
-    for i, line in enumerate(reader):
-        line = re.split(DELIMITERS, line)
-        header = f' !  Line {i}: '
-        if len(line) >= 2:
-            if line[0].startswith('$'):
-                # Parse setting
-                key = line[0][1:].strip().lower()
-                value = line[1].strip().lower()
-                if key in SETTINGS:
-                    if value in SETTINGS[key][1]:
-                        SETTINGS[key][0] = value
-                    else:
-                        print(header + f"Invalid value '{value}' for setting '{key}':")
-                        print(' ' * 4 + f' -  Valid values are: {SETTINGS[key][1]}')
+with open('config.json', 'r') as file:
+    config = json.load(file)
+
+    # Parse settings
+    if 'settings' in config:
+        for key, value in config['settings']:
+            key = key.lower()
+            value = value.lower()
+            if key in SETTINGS:
+                if value in SETTINGS[key][1]:
+                    SETTINGS[key][0] = value
                 else:
-                    print(header + f"Unrecognized setting '{key}'")
+                    print(f" !  Invalid value '{value}' for setting '{key}':")
+                    print(' ' * 4 + f' -  Valid values are: {SETTINGS[key][1]}')
             else:
-                # Parse repository
-                owner = line[0].strip()
-                repo = line[1].strip()
-                custom_link = ''.join(x.strip() for x in line[2:])
+                print(f" !  Unrecognized setting '{key}'")
 
-                # Add repo to grid
-                if r == len(repos):
-                    repos.append([])
-                repos[r].append((owner, repo, custom_link))
+    for repo in config['items']:
+        # Add repo to grid
+        if r == len(repos):
+            repos.append([])
+        repos[r].append((
+            repo['owner'].strip(),
+            repo['repo'].strip(),
+            repo['link'].strip() if 'link' in repo else ''
+        ))
 
-                next_c = c + 1
-                c = next_c % NUM_COLS
-                r += next_c // NUM_COLS
+        next_c = c + 1
+        c = next_c % NUM_COLS
+        r += next_c // NUM_COLS
 
 for row in repos:
     if len(row) != NUM_COLS:

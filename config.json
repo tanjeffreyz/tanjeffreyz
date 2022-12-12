@@ -1,0 +1,39 @@
+{
+  "settings": {},
+  "items": [
+    {
+      "owner": "tanjeffreyz",
+      "repo": "auto-maple"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "planit"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "github-statistics"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "eavt-backend"
+    },
+    {
+      "owner": "Marble-Rundown",
+      "repo": "Animarble"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "electrotactile-braille-display",
+      "link": "https://tanjeffreyz.github.io/electrotactile-braille-display"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "ml-paper-implementations",
+      "link": "https://tanjeffreyz.github.io/ml-paper-implementations"
+    },
+    {
+      "owner": "tanjeffreyz",
+      "repo": "yolo-v1"
+    }
+  ]
+}
