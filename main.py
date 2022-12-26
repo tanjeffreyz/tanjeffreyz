@@ -23,11 +23,11 @@ with open('config.json', 'r') as file:
             key = key.lower()
             value = value.lower()
             if key in SETTINGS:
-                if value in SETTINGS[key][1]:
-                    SETTINGS[key][0] = value
+                if value in SETTINGS[key].allowed_values:
+                    SETTINGS[key].value = value
                 else:
                     print(f" !  Invalid value '{value}' for setting '{key}':")
-                    print(' ' * 4 + f' -  Valid values are: {SETTINGS[key][1]}')
+                    print(' ' * 4 + f' -  Valid values are: {SETTINGS[key].allowed_values}')
             else:
                 print(f" !  Unrecognized setting '{key}'")
 
@@ -61,7 +61,7 @@ for r in range(rows):
 
         src = f'{HOST}/repo?r={r}&c={c}&maxR={rows}&owner={owner}&repo={repo}'
         for s in SETTINGS:
-            src += f"&{s}={SETTINGS[s][0]}"
+            src += f"&{s}={SETTINGS[s].value}"
         link = custom_link if custom_link else f'https://github.com/{owner}/{repo}'
 
         html_row.append(utils.image(src, link, CARD_WIDTH))
