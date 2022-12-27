@@ -1,6 +1,7 @@
 import json
-from src import utils
 from src.config import *
+from src import utils
+from src.settings import SETTINGS
 
 
 # Overview banner
