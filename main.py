@@ -1,8 +1,11 @@
+import re
 import json
 from src.config import *
 from src import utils
 from src.settings import SETTINGS
 
+
+error = False
 
 # Overview banner
 result = [
@@ -15,41 +18,54 @@ repos = [[]]
 r = 0
 c = 0
 
-with open('config.json', 'r') as file:
-    config = json.load(file)
-
-    # Parse settings
-    if 'settings' in config:
-        for key, value in config['settings'].items():
-            key = key.lower()
-            value = value.lower()
-            if key in SETTINGS:
-                if value in SETTINGS[key].allowed_values:
-                    SETTINGS[key].value = value
-                else:
-                    print(f" !  Invalid value '{value}' for setting '{key}':")
-                    print(' ' * 4 + f' -  Valid values are: {SETTINGS[key].allowed_values}')
+# Parse settings
+with open('settings.json', 'r') as file:
+    settings = json.load(file)
+    for key, value in settings.items():
+        key = key.lower()
+        value = value.lower()
+        if key in SETTINGS:
+            if value in SETTINGS[key].allowed_values:
+                SETTINGS[key].value = value
             else:
-                print(f" !  Unrecognized setting '{key}'")
+                print(f" !  Invalid value '{value}' for setting '{key}':")
+                print(' ' * 4 + f' -  Valid values are: {SETTINGS[key].allowed_values}')
+        else:
+            print(f" !  Unrecognized setting '{key}'")
 
-    for repo in config['items']:
+# Add repositories to grid
+num_repos = 0
+with open('items.txt', 'r') as file:
+    for i, line in enumerate(file.readlines()):
+        stripped = line.strip()
+        if len(line) == 0:
+            continue
+
+        try:
+            items = re.split(r'\s+', stripped)
+            owner, repo = items[0].split('/')
+            link = items[1] if len(items) == 2 else ''
+        except ValueError:
+            print(f" !  Line {i + 1}: Malformed list item")
+            error = True
+            continue
+
         # Add repo to grid
         if r == len(repos):
             repos.append([])
-        repos[r].append((
-            repo['owner'].strip(),
-            repo['repo'].strip(),
-            repo['link'].strip() if 'link' in repo else ''
-        ))
+        repos[r].append((owner.strip(), repo.strip(), link.strip()))
 
+        num_repos += 1
         next_c = c + 1
         c = next_c % NUM_COLS
         r += next_c // NUM_COLS
 
+if error:
+    exit(1)
+
 for row in repos:
     if len(row) != NUM_COLS:
-        n = len(config['items'])
-        print(f"[!] {n} repositories not enough to make {len(repos)}x{NUM_COLS} grid")
+        print(f"[!] {num_repos} repositories not enough to make {len(repos)}x{NUM_COLS} grid")
         exit(1)
 
 # Create entries
