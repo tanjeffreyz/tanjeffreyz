@@ -1,8 +1,8 @@
 import re
 import json
-from src import utils
-from src.config import *
-from src.settings import SETTINGS
+import utils
+from config import *
+from settings import SETTINGS
 
 
 error = False
