@@ -1,7 +1,7 @@
 import re
 import json
-from src.config import *
 from src import utils
+from src.config import *
 from src.settings import SETTINGS
 
 

@@ -1,8 +1,8 @@
 tanjeffreyz/auto-maple
- tanjeffreyz/eavt
+tanjeffreyz/eavt
 tanjeffreyz/planit
- tanjeffreyz/github-statistics
+tanjeffreyz/github-statistics
 Marble-Rundown/Animarble
-  tanjeffreyz/electrotactile-braille-display    https://tanjeffreyz.github.io/electrotactile-braille-display
+tanjeffreyz/electrotactile-braille-display    https://tanjeffreyz.github.io/electrotactile-braille-display
 tanjeffreyz/ml-paper-implementations    https://tanjeffreyz.github.io/ml-paper-implementations
 tanjeffreyz/yolo-v1
