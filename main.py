@@ -20,7 +20,7 @@ with open('config.json', 'r') as file:
 
     # Parse settings
     if 'settings' in config:
-        for key, value in config['settings']:
+        for key, value in config['settings'].items():
             key = key.lower()
             value = value.lower()
             if key in SETTINGS:
