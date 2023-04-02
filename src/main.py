@@ -38,7 +38,7 @@ num_repos = 0
 with open('items.txt', 'r') as file:
     for i, line in enumerate(file.readlines()):
         stripped = line.strip()
-        if len(line) == 0:
+        if len(line) == 0 or line.startswith(COMMENT_SYMBOL):
             continue
 
         try:
