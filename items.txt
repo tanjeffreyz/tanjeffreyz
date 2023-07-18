@@ -4,7 +4,7 @@ tanjeffreyz/eavt
 tanjeffreyz/planit
 tanjeffreyz/github-statistics
 Marble-Rundown/Animarble
-tanjeffreyz/ml-paper-implementations          https://tanjeffreyz.github.io/ml-paper-implementations
+tanjeffreyz/ml-paper-implementations          https://tanjeffreyz.vercel.app/research?tab=implementations
 tanjeffreyz/yolo-v1
 
 
