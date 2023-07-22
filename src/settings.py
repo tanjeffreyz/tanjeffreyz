@@ -8,6 +8,6 @@ class Setting:
 SETTINGS = {
     'order': Setting(
         ('zig-zag', 'in-order'),
-        default='zig-zag'
+        default='in-order'
     )
 }
