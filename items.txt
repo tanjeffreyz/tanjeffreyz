@@ -2,7 +2,7 @@ tanjeffreyz/auto-maple
 tanjeffreyz/2face
 tanjeffreyz/planit
 tanjeffreyz/github-statistics
-Marble-Rundown/Animarble
+stanford-crfm/air-bench-2024
 tanjeffreyz/ml-paper-implementations          https://tanjeffreyz.vercel.app/research?tab=implementations
 tanjeffreyz/yolo-v1
 tanjeffreyz/attention-is-all-you-need
