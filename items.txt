@@ -1,7 +1,7 @@
 tanjeffreyz/auto-maple
+stanford-crfm/air-bench-2024
 tanjeffreyz/planit
 tanjeffreyz/github-statistics
-stanford-crfm/air-bench-2024
 tanjeffreyz/neural-algorithm-of-artistic-style
 tanjeffreyz/yolo-v1
 tanjeffreyz/attention-is-all-you-need 
