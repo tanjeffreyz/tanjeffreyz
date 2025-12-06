@@ -35,7 +35,7 @@ with open('settings.json', 'r') as file:
 
 # Add repositories to grid
 num_repos = 0
-with open('items.txt', 'r') as file:
+with open('repositories.txt', 'r') as file:
     for i, line in enumerate(file.readlines()):
         stripped = line.strip()
         if not stripped or stripped.startswith(COMMENT_SYMBOL):
